@@ -1,0 +1,22 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	<h:dataTable value="#{categoryBean.listCategories}" var="c" border="1">
+		<f:facet name="header">All CATEGORIES</f:facet>
+		<h:column>
+			<f:facet name="header">id</f:facet>
+			<h:outputText value="#{c.id}" />
+		</h:column>
+		<h:column>
+			<f:facet name="header">name</f:facet>
+			<h:outputText value="#{c.name}" />
+		</h:column>
+		<h:column>
+			<f:facet name="header">action</f:facet>
+			<h:form>
+				<h:commandButton value="select" />
+			</h:form>
+		</h:column>
+	</h:dataTable>
+</ui:composition>
